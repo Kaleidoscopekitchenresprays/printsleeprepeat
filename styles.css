@@ -311,3 +311,82 @@ p {
     background: rgba(0, 0, 0, 0.65); /* darken video slightly */
     z-index: -2;
 }
+
+/* -------------------------------------------
+   MOBILE RESPONSIVE FIXES (Under 768px)
+------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 0;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+    }
+
+    /* Hero Text Scaling */
+    .hero {
+        padding: 120px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Background video fix */
+    #bg-video {
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;   /* Full mobile height */
+    }
+
+    /* Gallery grid */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .gallery-grid img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
+
+    /* Contact Form */
+    .contact-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .contact-form button {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    /* About Page */
+    .about-section {
+        width: 90%;
+        padding: 20px;
+        line-height: 1.6;
+    }
+
+}
