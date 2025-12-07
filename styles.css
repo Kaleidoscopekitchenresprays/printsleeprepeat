@@ -410,3 +410,19 @@ p {
     object-fit: cover;
     pointer-events: none;
 }
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+
+    /* These two lines are critical for iOS/Android */
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+
+    pointer-events: none;
+    z-index: -1;
+}
